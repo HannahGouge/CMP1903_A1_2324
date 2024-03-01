@@ -14,10 +14,14 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-
+        int current_die;
 
         //Method
-
+        public int rolls()
+        {
+            current_die = Next(1,7)
+            return current_die
+        }
 
     }
 }

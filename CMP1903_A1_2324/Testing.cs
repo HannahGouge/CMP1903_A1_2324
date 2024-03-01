@@ -16,5 +16,19 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+        public Testing()
+        {
+            Game g1 = new Game()
+            d1, d2, d3, total = g1.Test();
+            if (d1 + d2 + d3 == total)
+            {
+                Console.WriteLine("Test Passed");
+            }
+            else
+            {
+                Condole.WriteLine("Test Failed");
+            }
+            
+        }
     }
 }

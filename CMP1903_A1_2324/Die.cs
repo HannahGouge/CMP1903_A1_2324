@@ -14,13 +14,22 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-        int current_die;
+        private int _CurrentDie;
+        public int CurrentDie
+        {
+            get { return _CurrentDie }
+            private set { _CurrentDie = value }
+        }
 
         //Method
+        public Die()
+        {
+            CurrentDie = 0;
+        }
         public int rolls()
         {
-            current_die = Next(1,7)
-            return current_die
+            CurrentDie = Next(1,7);
+            return _CurrentDie
         }
 
     }

@@ -28,7 +28,12 @@ namespace CMP1903_A1_2324
             {
                 Condole.WriteLine("Test Failed");
             }
-            
+
+            Die d4 = new Die()
+            Die d5 = new Die()
+            Die d6 = new Die()
+            Die d7 = new Die()
+
         }
     }
 }

@@ -14,22 +14,22 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-        private int _CurrentDie;
-        public int CurrentDie
+        private int _CurrentDie; // Variable called _CurrentDie
+        public int CurrentDie // Getter and setter methods for _CurrentDie
         {
             get { return _CurrentDie }
             private set { _CurrentDie = value }
         }
 
         //Method
-        public Die()
+        public Die() // Constructor
         {
             CurrentDie = 0;
         }
-        public int rolls()
+        public int rolls() // Rolls method
         {
-            random random = new random();
-            CurrentDie = random.Next(1,7);
+            random random = new random(); // Created a instance of the random class
+            CurrentDie = random.Next(1,7); // Generates a random number between 1 and 6 (inclusively)
             return _CurrentDie
         }
 

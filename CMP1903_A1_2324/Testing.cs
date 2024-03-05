@@ -22,11 +22,11 @@ namespace CMP1903_A1_2324
             d1, d2, d3, total = g1.Test();
             if (d1 + d2 + d3 == total)
             {
-                Console.WriteLine("Test Passed");
+                Console.WriteLine("Game Test Passed");
             }
             else
             {
-                Condole.WriteLine("Test Failed");
+                Condole.WriteLine("Game Test Failed");
             }
 
             Die d4 = new Die()
@@ -34,6 +34,14 @@ namespace CMP1903_A1_2324
             Die d6 = new Die()
             Die d7 = new Die()
 
+            if (1 <= d4 <= 6 and 1 <= d5 <= 6 and 1 <= d6 <= 6 and 1 <= d7 <= 6)
+            {
+                Console.WriteLine("Dice Test Passed");
+            }
+            else
+            {
+                Console.WriteLine("Dice Test Failed");
+            }
         }
     }
 }

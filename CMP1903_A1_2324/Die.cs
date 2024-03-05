@@ -28,7 +28,8 @@ namespace CMP1903_A1_2324
         }
         public int rolls()
         {
-            CurrentDie = Next(1,7);
+            random random = new random();
+            CurrentDie = random.Next(1,7);
             return _CurrentDie
         }
 

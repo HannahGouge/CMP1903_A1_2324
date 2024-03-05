@@ -42,6 +42,9 @@ namespace CMP1903_A1_2324
         public Game()
         {
             Total = 0;
+        }
+        public int RunGame()
+        {
             d1 = int Game.CreateDice();
             d2 = int Game.CreateDice();
             d3 = int Game.CreateDice();

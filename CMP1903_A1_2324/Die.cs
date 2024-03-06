@@ -15,21 +15,18 @@ namespace CMP1903_A1_2324
 
         //Property
         private int _CurrentDie;
-        public int CurrentDie
-        {
-            get { return _CurrentDie }
-            private set { _CurrentDie = value }
-        }
+        public int CurrentDiem {  get; set; }
 
         //Method
         public Die()
         {
-            CurrentDie = 0;
+            _CurrentDie = 0;
         }
-        public int rolls()
+        public int roll()
         {
-            CurrentDie = Next(1,7);
-            return _CurrentDie
+            Random rnd = new Random();
+            _CurrentDie = rnd.Next(1, 7);
+            return _CurrentDie;
         }
 
     }

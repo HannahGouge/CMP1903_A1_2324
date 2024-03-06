@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,26 +19,11 @@ namespace CMP1903_A1_2324
         private int _d1 = 0;
         private int _d2 = 0;
         private int _d3 = 0;
-        public int Total
-        {
-            get { return _Total}
-            set { _Total = value}
-        }
-        public int d1
-        {
-            get { return _d1}
-            set { _d1 = value}
-        }
-        public int d2
-        {
-            get { return _d2}
-            set { _d2 = value}
-        }
-        public int d3
-        {
-            get { return _d3}
-            set { _d3 = value}
-        }
+        public int Total { get; set; }
+        public int d1 { get; set; }
+        public int d2 { get; set; }
+        public int d3 { get; set; }
+       
         //Methods
         public Game()
         {
@@ -45,22 +31,28 @@ namespace CMP1903_A1_2324
         }
         public int RunGame()
         {
-            d1 = int Game.CreateDice();
-            d2 = int Game.CreateDice();
-            d3 = int Game.CreateDice();
-            return Total
+            d1 = CreateDice();
+            d2 = CreateDice();
+            d3 = CreateDice();
+            _Total = AddDice(d1, d2, d3);
+            return _Total;
         }
 
         private int CreateDice()
         {
             Die d = new Die();
-            Total += d.rolls();
-            return d
+            int dice = d.roll();
+            return dice;
         }
-
-        public int Test()
+        private int AddDice(int d1, int d2, int d3)
         {
-            return d1, d2, d3, Total
+            _Total = d1 + d2 + d3;
+            return _Total;
+        }
+        public int Test(int d1, int d2, int d3)
+        {
+            _Total = AddDice(d1, d2, d3);
+            return _Total;
         }
     }
 }

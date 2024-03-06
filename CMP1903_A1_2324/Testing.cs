@@ -18,30 +18,18 @@ namespace CMP1903_A1_2324
         //Method
         public Testing()
         {
-            Game g1 = new Game()
-            d1, d2, d3, total = g1.Test();
-            if (d1 + d2 + d3 == total)
-            {
-                Console.WriteLine("Game Test Passed");
-            }
-            else
-            {
-                Condole.WriteLine("Game Test Failed");
-            }
+            Game g1 = new Game() // Creates an instance of the Game class
+            d1, d2, d3, total = g1.Test(); // Calls the Test method from the Game class
+            Debug.Assert(d1 + d2 + d3 = total, "Game Test Passed") // Checks wether total is calculated correctly
 
-            Die d4 = new Die()
+            Die d4 = new Die() // Creates 3 instances of the Die class
             Die d5 = new Die()
             Die d6 = new Die()
             Die d7 = new Die()
 
-            if (1 <= d4 <= 6 and 1 <= d5 <= 6 and 1 <= d6 <= 6 and 1 <= d7 <= 6)
-            {
-                Console.WriteLine("Dice Test Passed");
-            }
-            else
-            {
-                Console.WriteLine("Dice Test Failed");
-            }
+            Debug.Assert(1 <= d4.rolls <= 6, "Dice 1 Test Pass") // Checks to see if the die values are between 1 and 6 (inclusive)
+            Debug.Assert(1 <= d5.rolls <= 6, "Dice 2 Test Pass")
+            Debug.Assert(1 <= d6.rolls <= 6, "Dice 3 Test Pass")
         }
     }
 }

@@ -14,18 +14,17 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-        private int _CurrentDie;
-        public int CurrentDiem {  get; set; }
+        private int _CurrentDie; // Creates a new properties
 
         //Method
-        public Die()
+        public Die() // Constructor
         {
             _CurrentDie = 0;
         }
         public int roll()
         {
-            Random rnd = new Random();
-            _CurrentDie = rnd.Next(1, 7);
+            Random rnd = new Random(); // Creates a new instace of the Random method
+            _CurrentDie = rnd.Next(1, 7); // Randomises a number between 1 and 7 (exclusively ie 1-6)
             return _CurrentDie;
         }
 
